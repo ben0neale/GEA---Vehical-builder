@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     Vector3 pos;
+
     // Start is called before the first frame update
     void Start()
     {
