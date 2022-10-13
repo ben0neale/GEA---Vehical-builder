@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
+    float CamSpeed = 40f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        transform.RotateAround(Vector3.zero, transform.up, x);
-        transform.RotateAround(Vector3.zero, transform.right, y);
+        transform.RotateAround(Vector3.zero, Vector3.up, x * CamSpeed * Time.deltaTime);
+        transform.RotateAround(Vector3.zero, transform.right, y * CamSpeed * Time.deltaTime);
     }
 }
