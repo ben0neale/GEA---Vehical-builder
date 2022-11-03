@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
+    [SerializeField] GameObject Base;
+    [SerializeField] GameObject camera;
+
     Vector3 pos;
+    bool dragging = false;
+    bool colliding = false;
+    float zPos = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -16,13 +22,43 @@ public class ItemPickup : MonoBehaviour
     void Update()
     {
         pos = Input.mousePosition;
-        pos.z = 10;
+        pos.z = zPos;
         pos = Camera.main.ScreenToWorldPoint(pos);
+
+        //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+
+        if (!colliding && zPos < 10)
+        {
+            zPos += .001f;
+        }
     }
 
 
     private void OnMouseDrag()
     {
         gameObject.transform.position = pos;
+        dragging = true;
+    }
+
+    private void OnMouseUp()
+    {
+        dragging = false;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "base")
+        {
+            print("BASE COLLIDE");
+            colliding = true;
+            zPos -= .1f;
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        colliding = false;
+        zPos += .1f;
     }
 }
