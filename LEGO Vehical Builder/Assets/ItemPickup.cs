@@ -29,7 +29,7 @@ public class ItemPickup : MonoBehaviour
 
         if (!colliding && zPos < 10)
         {
-            zPos += .001f;
+            zPos += .01f;
         }
     }
 
