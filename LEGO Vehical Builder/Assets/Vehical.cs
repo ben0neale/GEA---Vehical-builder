@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Vehical : MonoBehaviour
 {
+    [SerializeField] GameController gameController;
     List<GameObject> Parts = new List<GameObject>();
 
     // Start is called before the first frame update
@@ -21,11 +22,14 @@ public class Vehical : MonoBehaviour
 
     void Movement()
     {
-        if (CheckPart("Wheel"))
+        if (gameController.gameState == GameController.GameState.play)
         {
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (CheckPart("Wheel"))
             {
-                transform.position = transform.position + new Vector3(0, 0, 1);
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    transform.position = transform.position + new Vector3(0, 0, 100 * Time.deltaTime);
+                }
             }
         }
     }
@@ -33,6 +37,7 @@ public class Vehical : MonoBehaviour
     public void AddPart(GameObject part)
     {
         Parts.Add(part);
+        part.transform.parent = this.transform;
         foreach (GameObject item in Parts)
         {
             print(item.name);
@@ -43,11 +48,12 @@ public class Vehical : MonoBehaviour
     {
         foreach (GameObject item in Parts)
         {
-            if (item.name == name)
+            if (item.tag == name)
             {
                 return true;
             }
         }
         return false;
     }
+
 }
