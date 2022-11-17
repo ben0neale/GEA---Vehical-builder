@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Wheel : VehicalPart
 {
-    
+    [SerializeField] GameController gameController;
+    [SerializeField] MeshCollider collider;
 
     // Update is called once per frame
     void Update()
@@ -12,6 +13,14 @@ public class Wheel : VehicalPart
         if (placeable && GetSelected())
         {
             ConnectPart(gameObject);
+        }
+        if (gameController.gameState == GameController.GameState.Build)
+        {
+            collider.isTrigger = true;
+        }
+        else if (gameController.gameState == GameController.GameState.play)
+        {
+            collider.isTrigger = false;
         }
     }
 

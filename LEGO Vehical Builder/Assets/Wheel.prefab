@@ -118,7 +118,7 @@ Transform:
   m_Children:
   - {fileID: 5987410054242234630}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5595748656785059064
 MeshFilter:
@@ -186,6 +186,8 @@ MonoBehaviour:
   selected: 0
   vehical: {fileID: 0}
   placeable: 0
+  gameController: {fileID: 0}
+  collider: {fileID: 3307456729690197849}
 --- !u!114 &5595748656785059069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b36106724ebe6b46a877db625bf88a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamecontroller: {fileID: 0}
   Base: {fileID: 0}
   camera: {fileID: 0}
 --- !u!64 &3307456729690197849
