@@ -17,7 +17,17 @@ public class Wheel : VehicalPart
 
     private void OnTriggerEnter(Collider other)
     {
-        placeable = true;
+        if (other.gameObject.tag == "collision")
+        {
+            placeable = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "collision")
+        {
+            placeable = false;
+        }
     }
 
     private void OnMouseDown()

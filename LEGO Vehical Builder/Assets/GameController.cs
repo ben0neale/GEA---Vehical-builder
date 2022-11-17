@@ -18,9 +18,17 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            gameState = GameState.play;
+            if (gameState == GameState.Build)
+            {
+                gameState = GameState.play;
+            }
+            else if (gameState == GameState.play)
+            {
+                gameState = GameState.Build;
+            }
+
         }
 
         if (gameState == GameState.Build)

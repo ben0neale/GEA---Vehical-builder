@@ -42,6 +42,11 @@ public class Vehical : MonoBehaviour
                 }
             }
         }
+        if (gameController.gameState == GameController.GameState.Build)
+        {
+            transform.position = new Vector3(0, 0, 0);
+            RB.useGravity = false;
+        }
     }
 
     public void AddPart(GameObject part)
