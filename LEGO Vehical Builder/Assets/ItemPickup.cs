@@ -27,13 +27,14 @@ public class ItemPickup : MonoBehaviour
             pos = Input.mousePosition;
             pos.z = zPos;
             pos = Camera.main.ScreenToWorldPoint(pos);
+            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
         }
 
-        //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+        
 
         if (!colliding && zPos < 10)
         {
-            zPos += .1f;
+            //zPos += .1f;
         }
     }
 
@@ -55,7 +56,7 @@ public class ItemPickup : MonoBehaviour
         {
             print("BASE COLLIDE");
             colliding = true;
-            zPos -= .1f;
+            //zPos -= .1f;
         }
     }
 

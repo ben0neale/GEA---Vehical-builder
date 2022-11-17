@@ -7,6 +7,8 @@ public class Vehical : MonoBehaviour
 {
     [SerializeField] GameController gameController;
     List<GameObject> Parts = new List<GameObject>();
+    [SerializeField] Rigidbody RB;
+    bool changed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,14 @@ public class Vehical : MonoBehaviour
     {
         if (gameController.gameState == GameController.GameState.play)
         {
+            if (!changed)
+            {
+                transform.position = new Vector3(100, 10, 100);
+                RB.useGravity = true;
+                changed = true;
+            }
+
+
             if (CheckPart("Wheel"))
             {
                 if (Input.GetKey(KeyCode.UpArrow))
