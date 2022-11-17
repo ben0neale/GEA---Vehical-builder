@@ -5,16 +5,11 @@ using UnityEngine;
 public class Wheel : VehicalPart
 {
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (placeable)
+        if (placeable && GetSelected())
         {
             ConnectPart(gameObject);
         }
@@ -24,4 +19,15 @@ public class Wheel : VehicalPart
     {
         placeable = true;
     }
+
+    private void OnMouseDown()
+    {
+        SetSelected();
+    }
+
+    private void OnMouseUp()
+    {
+        SetNotSelected();
+    }
+
 }

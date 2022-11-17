@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
+    [SerializeField] GameController gamecontroller;
     [SerializeField] GameObject Base;
     [SerializeField] GameObject camera;
 
@@ -21,15 +22,18 @@ public class ItemPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pos = Input.mousePosition;
-        pos.z = zPos;
-        pos = Camera.main.ScreenToWorldPoint(pos);
+        if (gamecontroller.gameState == GameController.GameState.Build)
+        {
+            pos = Input.mousePosition;
+            pos.z = zPos;
+            pos = Camera.main.ScreenToWorldPoint(pos);
+        }
 
         //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
 
         if (!colliding && zPos < 10)
         {
-            zPos += .01f;
+            zPos += .1f;
         }
     }
 
@@ -53,12 +57,14 @@ public class ItemPickup : MonoBehaviour
             colliding = true;
             zPos -= .1f;
         }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
-        colliding = false;
-        zPos += .1f;
+        if (other.gameObject.tag == "collision")
+        {
+            colliding = false;
+        }
     }
+
 }

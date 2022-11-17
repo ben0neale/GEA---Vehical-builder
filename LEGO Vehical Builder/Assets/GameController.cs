@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] GameObject MainCam;
+    [SerializeField] GameObject CarCam;
     public enum GameState {Build, play};
     public GameState gameState;
 
@@ -19,6 +21,18 @@ public class GameController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             gameState = GameState.play;
-        }   
+        }
+
+        if (gameState == GameState.Build)
+        {
+            CarCam.SetActive(false);
+            MainCam.SetActive(true);
+        }
+
+        if (gameState == GameState.play)
+        {
+            MainCam.SetActive(false);
+            CarCam.SetActive(true);
+        }
     }
 }
