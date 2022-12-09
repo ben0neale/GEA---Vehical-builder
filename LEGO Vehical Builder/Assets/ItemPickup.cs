@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] GameController gamecontroller;
+    [SerializeField] Wheel Wheel;
     [SerializeField] GameObject Base;
     [SerializeField] GameObject camera;
 
@@ -13,41 +14,17 @@ public class ItemPickup : MonoBehaviour
     bool colliding = false;
     float zPos = 10;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (gamecontroller.gameState == GameController.GameState.Build)
         {
-            pos = Input.mousePosition;
-            pos.z = zPos;
-            pos = Camera.main.ScreenToWorldPoint(pos);
             transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
+
+
         }
 
-        
 
-        if (!colliding && zPos < 10)
-        {
-            //zPos += .1f;
-        }
-    }
-
-
-    private void OnMouseDrag()
-    {
-        gameObject.transform.position = pos;
-        dragging = true;
-    }
-
-    private void OnMouseUp()
-    {
-        dragging = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -56,7 +33,6 @@ public class ItemPickup : MonoBehaviour
         {
             print("BASE COLLIDE");
             colliding = true;
-            //zPos -= .1f;
         }
     }
 

@@ -213,9 +213,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: gamecontroller
       value: 
@@ -470,9 +478,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: gamecontroller
       value: 
@@ -747,9 +763,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: gamecontroller
       value: 
@@ -826,9 +850,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: gamecontroller
       value: 
@@ -913,9 +945,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: gamecontroller
       value: 
@@ -1047,9 +1087,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: gamecontroller
       value: 
@@ -1130,9 +1178,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 42554899}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: Wheel
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
+      propertyPath: vehicalPart
+      value: 
+      objectReference: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
     - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
       propertyPath: gamecontroller
       value: 

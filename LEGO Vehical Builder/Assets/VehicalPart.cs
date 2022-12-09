@@ -6,25 +6,16 @@ public class VehicalPart : MonoBehaviour
 {
     [SerializeField] GameObject SelectedBlock;
     public bool selected = false;
+    public bool tempSelected = false;
 
     [SerializeField] Vehical vehical;
     public bool placeable = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float timer = .1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void ConnectPart(GameObject part)
     {
-        print("PLaceable");
         if (placeable && Input.GetKeyDown(KeyCode.E))
         {
             vehical.AddPart(part);
@@ -34,18 +25,21 @@ public class VehicalPart : MonoBehaviour
 
     public void SetSelected()
     {
-        selected = true;
         SelectedBlock.SetActive(true);
+        selected = true;
     }
 
     public void SetNotSelected()
     {
-        selected = false;
         SelectedBlock.SetActive(false);
+        selected = false;
     }
 
     public bool GetSelected()
     {
         return selected;
     }
+
+
+
 }
