@@ -42,6 +42,16 @@ public class Vehical : MonoBehaviour
                     transform.Rotate(0, -100 * Time.deltaTime, 0);
                 }
             }
+            if (CheckPart("wing"))
+            {
+                if (gameController.gameState == GameController.GameState.play)
+                {
+                    if (Input.GetKeyDown(KeyCode.LeftShift))
+                    {
+                        RB.AddForce(new Vector3(0, 500, 0));
+                    }
+                }
+            }
         }
         if (gameController.gameState == GameController.GameState.Build)
         {

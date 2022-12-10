@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wheel : VehicalPart
+public class Wing : VehicalPart
 {
     [SerializeField] GameController gameController;
-    [SerializeField] MeshCollider collider;
-    
-
+    [SerializeField] BoxCollider collider;
 
     // Update is called once per frame
     void Update()
@@ -34,7 +32,7 @@ public class Wheel : VehicalPart
         {
             timer -= Time.deltaTime;
         }
-        else if(tempSelected)
+        else if (tempSelected)
         {
             SetSelected();
             tempSelected = false;

@@ -58,6 +58,10 @@ public class Block : VehicalPart
         {
             placeable = true;
         }
+        if (other.gameObject.tag == "base")
+        {
+            placeable = false;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
