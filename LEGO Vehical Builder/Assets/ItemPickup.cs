@@ -9,20 +9,26 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] Wheel Wheel;
     [SerializeField] GameObject Base;
     [SerializeField] GameObject camera;
+    [SerializeField] private Material selectBlockmat;
 
     bool colliding = false;
 
-
     public float timer = .1f;
 
-    public GameController gameController;
+    Color color;
 
+    public GameController gameController;
 
     // Update is called once per frame
     void Update()
     {
+        if (!vehicalPartref.placeable)
+        {
+            selectBlockmat.color = new Color(0, 0, 0, 0.00001f);
+        }
         if (vehicalPartref.placeable && vehicalPartref.GetSelected())
         {
+            selectBlockmat.color = new Color(0, 100, 0, 0.00001f);
             vehicalPartref.ConnectPart(gameObject);
         }
         if (gameController.gameState == GameController.GameState.Build)
