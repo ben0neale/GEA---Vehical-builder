@@ -9,10 +9,7 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] GameObject Base;
     [SerializeField] GameObject camera;
 
-    Vector3 pos;
-    bool dragging = false;
     bool colliding = false;
-    float zPos = 10;
 
     // Update is called once per frame
     void Update()
@@ -20,11 +17,7 @@ public class ItemPickup : MonoBehaviour
         if (gamecontroller.gameState == GameController.GameState.Build)
         {
             transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), Mathf.Round(transform.position.z));
-
-
         }
-
-
     }
 
     private void OnTriggerStay(Collider other)

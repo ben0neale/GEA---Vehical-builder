@@ -10,12 +10,6 @@ public class Vehical : MonoBehaviour
     [SerializeField] Rigidbody RB;
     bool changed = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +26,6 @@ public class Vehical : MonoBehaviour
                 RB.useGravity = true;
                 changed = true;
             }
-
 
             if (CheckPart("Wheel"))
             {
@@ -52,7 +45,7 @@ public class Vehical : MonoBehaviour
     public void AddPart(GameObject part)
     {
         Parts.Add(part);
-        part.transform.parent = this.transform;
+        part.transform.parent = transform;
         foreach (GameObject item in Parts)
         {
             print(item.name);

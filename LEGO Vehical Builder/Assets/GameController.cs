@@ -6,6 +6,8 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] GameObject MainCam;
     [SerializeField] GameObject CarCam;
+    [SerializeField] GameObject block;
+    [SerializeField] GameObject wheel;
     public enum GameState {Build, play};
     public GameState gameState;
 
@@ -28,7 +30,15 @@ public class GameController : MonoBehaviour
             {
                 gameState = GameState.Build;
             }
+        }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Instantiate(block, new Vector3(0, 0, -2), Quaternion.identity);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Instantiate(wheel, new Vector3(0, 0, -2), Quaternion.Euler(0,0,90));
         }
 
         if (gameState == GameState.Build)

@@ -10,6 +10,7 @@ public class VehicalPart : MonoBehaviour
 
     [SerializeField] Vehical vehical;
     public bool placeable = false;
+    public bool placed = false;
 
     public float timer = .1f;
 
@@ -18,6 +19,7 @@ public class VehicalPart : MonoBehaviour
     {
         if (placeable && Input.GetKeyDown(KeyCode.E))
         {
+            placed = true;
             vehical.AddPart(part);
             print("placed");
         }
@@ -40,6 +42,32 @@ public class VehicalPart : MonoBehaviour
         return selected;
     }
 
-
+    public void MovePart(GameObject part)
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            part.transform.position = transform.position + new Vector3(1, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            part.transform.position = transform.position + new Vector3(-1, 0, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            part.transform.position = transform.position + new Vector3(0, 0, 1);
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            part.transform.position = transform.position + new Vector3(0, 0, -1);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            part.transform.position = transform.position + new Vector3(0, 1, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            part.transform.position = transform.position + new Vector3(0, -1, 0);
+        }
+    }
 
 }

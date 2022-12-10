@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wheel : VehicalPart
+public class Block : VehicalPart
 {
     [SerializeField] GameController gameController;
-    [SerializeField] MeshCollider collider;
-    
+    [SerializeField] BoxCollider collider;
+    [SerializeField] GameObject outerCollision;
 
 
     // Update is called once per frame
@@ -14,7 +14,7 @@ public class Wheel : VehicalPart
     {
         if (placeable && GetSelected())
         {
-            ConnectPart(gameObject);
+            ConnectPart(this.gameObject);
         }
         if (gameController.gameState == GameController.GameState.Build)
         {
@@ -34,7 +34,7 @@ public class Wheel : VehicalPart
         {
             timer -= Time.deltaTime;
         }
-        else if(tempSelected)
+        else if (tempSelected)
         {
             SetSelected();
             tempSelected = false;
@@ -44,6 +44,11 @@ public class Wheel : VehicalPart
         if (GetSelected() && gameController.gameState == GameController.GameState.Build && !placed)
         {
             MovePart(gameObject);
+        }
+
+        if (placed)
+        {
+            outerCollision.SetActive(true);
         }
     }
 
