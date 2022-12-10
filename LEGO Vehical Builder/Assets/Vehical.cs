@@ -31,7 +31,15 @@ public class Vehical : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-                    transform.position = transform.position + new Vector3(0, 0, 50 * Time.deltaTime);
+                    transform.position = transform.position + transform.forward * 8 * Time.deltaTime;
+                }
+                if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    transform.Rotate(0, 100 * Time.deltaTime, 0);
+                }
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    transform.Rotate(0, -100 * Time.deltaTime, 0);
                 }
             }
         }

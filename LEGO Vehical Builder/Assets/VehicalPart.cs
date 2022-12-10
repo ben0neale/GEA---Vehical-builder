@@ -20,6 +20,7 @@ public class VehicalPart : MonoBehaviour
         if (placeable && Input.GetKeyDown(KeyCode.E))
         {
             placed = true;
+            SetNotSelected();
             vehical.AddPart(part);
             print("placed");
         }
