@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5424461648803022140}
   - component: {fileID: 5424461648803022143}
   - component: {fileID: -5386469739806689312}
+  - component: {fileID: 12183654}
   m_Layer: 0
   m_Name: Wing
   m_TagString: wing
@@ -34,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 7761220808210983285}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5424461648803022141
 MeshFilter:
@@ -94,7 +95,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5424461648803022142}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9, z: 0.9}
@@ -113,13 +114,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedBlock: {fileID: 3596144269273685264}
   selected: 0
-  tempSelected: 0
   vehical: {fileID: 0}
   placeable: 0
   placed: 0
+  tempSelected: 0
+--- !u!114 &12183654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424461648803022142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b36106724ebe6b46a877db625bf88a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamecontroller: {fileID: 0}
+  vehicalPartref: {fileID: -5386469739806689312}
+  Wheel: {fileID: 0}
+  Base: {fileID: 0}
+  camera: {fileID: 0}
   timer: 0.1
   gameController: {fileID: 0}
-  collider: {fileID: 5424461648803022143}
 --- !u!1001 &5424461648685985535
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5595748656785059065}
   - component: {fileID: 5595748656785059066}
   - component: {fileID: 5595748656785059069}
-  - component: {fileID: 3307456729690197849}
+  - component: {fileID: 1591418332}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Wheel
@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 5987410054242234630}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &5595748656785059064
 MeshFilter:
@@ -101,13 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedBlock: {fileID: 669623077107238243}
   selected: 0
-  tempSelected: 0
-  vehical: {fileID: 8574182105734463326, guid: 5918193e452fad44f9ac385110617d98, type: 3}
+  vehical: {fileID: 0}
   placeable: 0
   placed: 0
-  timer: 0.1
-  gameController: {fileID: 4746888364186563925, guid: 4c5ff77255174824188ec4b008fb4f71, type: 3}
-  collider: {fileID: 3307456729690197849}
+  tempSelected: 0
 --- !u!114 &5595748656785059069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,11 +117,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b36106724ebe6b46a877db625bf88a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamecontroller: {fileID: 4746888364186563925, guid: 4c5ff77255174824188ec4b008fb4f71, type: 3}
+  gamecontroller: {fileID: 0}
+  vehicalPartref: {fileID: 5595748656785059066}
   Wheel: {fileID: 5595748656785059066}
-  Base: {fileID: 8574182105734463316, guid: 5918193e452fad44f9ac385110617d98, type: 3}
+  Base: {fileID: 0}
   camera: {fileID: 0}
---- !u!64 &3307456729690197849
+  timer: 0.1
+  gameController: {fileID: 0}
+--- !u!64 &1591418332
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

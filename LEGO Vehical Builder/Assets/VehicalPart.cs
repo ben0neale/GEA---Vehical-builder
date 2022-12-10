@@ -6,14 +6,11 @@ public class VehicalPart : MonoBehaviour
 {
     [SerializeField] GameObject SelectedBlock;
     public bool selected = false;
-    public bool tempSelected = false;
-
     [SerializeField] Vehical vehical;
     public bool placeable = false;
     public bool placed = false;
 
-    public float timer = .1f;
-
+    public bool tempSelected = false;
 
     public void ConnectPart(GameObject part)
     {

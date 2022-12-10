@@ -114,9 +114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamecontroller: {fileID: 0}
+  vehicalPartref: {fileID: 1305567709}
   Wheel: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
   Base: {fileID: 0}
   camera: {fileID: 0}
+  timer: 0.1
+  gameController: {fileID: 0}
 --- !u!114 &1305567709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,13 +134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedBlock: {fileID: 4124431580697291858}
   selected: 0
-  tempSelected: 0
   vehical: {fileID: 0}
   placeable: 0
   placed: 0
-  timer: 0.1
-  gameController: {fileID: 0}
-  collider: {fileID: 4869360564723807563}
+  tempSelected: 0
   outerCollision: {fileID: 6583752195414201583}
 --- !u!1001 &4869360564384063421
 PrefabInstance:
