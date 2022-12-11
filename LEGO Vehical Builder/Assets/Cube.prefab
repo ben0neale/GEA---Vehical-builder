@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd31da3b271889d42ad5d0937349177f, type: 2}
+  - {fileID: 2100000, guid: 07dc66ae04b7f6a43b9674bf0fefb33a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   Wheel: {fileID: 5595748656785059066, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
   Base: {fileID: 0}
   camera: {fileID: 0}
+  selectBlockmat: {fileID: 2100000, guid: 2c29a04f6306a3842812a6b6bcf01285, type: 2}
   timer: 0.1
   gameController: {fileID: 0}
 --- !u!114 &1305567709
@@ -234,15 +235,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 669778337954198498, guid: a1df3a93870b6ad40a486209731fc3db, type: 3}
       propertyPath: m_Size.x
-      value: 1.3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 669778337954198498, guid: a1df3a93870b6ad40a486209731fc3db, type: 3}
       propertyPath: m_Size.y
-      value: 1.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 669778337954198498, guid: a1df3a93870b6ad40a486209731fc3db, type: 3}
       propertyPath: m_Size.z
-      value: 1.2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 669778337954198499, guid: a1df3a93870b6ad40a486209731fc3db, type: 3}
       propertyPath: m_RootOrder

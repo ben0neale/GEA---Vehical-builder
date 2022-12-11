@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5595748656785059065}
   - component: {fileID: 5595748656785059066}
   - component: {fileID: 5595748656785059069}
-  - component: {fileID: 1591418332}
+  - component: {fileID: 1591418333}
+  - component: {fileID: 1591418334}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Wheel
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 909af990945a9fe40a83ea731c836740, type: 2}
+  - {fileID: 2100000, guid: 8d530ffe6c4968843806085897955b9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,6 +106,7 @@ MonoBehaviour:
   placeable: 0
   placed: 0
   tempSelected: 0
+  collider: {fileID: 1591418334}
 --- !u!114 &5595748656785059069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,22 +124,53 @@ MonoBehaviour:
   Wheel: {fileID: 5595748656785059066}
   Base: {fileID: 0}
   camera: {fileID: 0}
+  selectBlockmat: {fileID: 2100000, guid: 2c29a04f6306a3842812a6b6bcf01285, type: 2}
   timer: 0.1
   gameController: {fileID: 0}
---- !u!64 &1591418332
+--- !u!64 &1591418333
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5595748656785059063}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a7f3149400a46bc4a950177a8d3f7bd9, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!146 &1591418334
+WheelCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5595748656785059063}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
+  m_Enabled: 1
 --- !u!1001 &8351195080191948428
 PrefabInstance:
   m_ObjectHideFlags: 0

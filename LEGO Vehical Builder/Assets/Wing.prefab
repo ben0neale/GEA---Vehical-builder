@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4b905f60df09c8245b6e0d5af2e04c7f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9, z: 0.9}
+  m_Size: {x: 0.95, y: 0.9, z: 0.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-5386469739806689312
 MonoBehaviour:
@@ -135,6 +135,7 @@ MonoBehaviour:
   Wheel: {fileID: 0}
   Base: {fileID: 0}
   camera: {fileID: 0}
+  selectBlockmat: {fileID: 2100000, guid: 2c29a04f6306a3842812a6b6bcf01285, type: 2}
   timer: 0.1
   gameController: {fileID: 0}
 --- !u!1001 &5424461648685985535

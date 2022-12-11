@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class Wheel : VehicalPart
 {
+    [SerializeField] WheelCollider collider;
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            collider.motorTorque = 500f;
+            collider.brakeTorque = 0f;
+        }
+        else
+        {
+            collider.brakeTorque = 1000f;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "collision")

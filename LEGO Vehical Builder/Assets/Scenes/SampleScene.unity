@@ -471,7 +471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a54b7ad866d3a9b47bbf3b53baa0acc4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -625,10 +625,6 @@ PrefabInstance:
       propertyPath: gamecontroller
       value: 
       objectReference: {fileID: 1116373841}
-    - target: {fileID: 5595748656785059069, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
-      propertyPath: selectBlockmat
-      value: 
-      objectReference: {fileID: 2100000, guid: 2c29a04f6306a3842812a6b6bcf01285, type: 2}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c8e5ce137a461ff4b933465a553aa40d, type: 3}
@@ -783,10 +779,6 @@ PrefabInstance:
       propertyPath: gamecontroller
       value: 
       objectReference: {fileID: 1116373841}
-    - target: {fileID: 4869360564723807562, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
-      propertyPath: selectBlockmat
-      value: 
-      objectReference: {fileID: 2100000, guid: 2c29a04f6306a3842812a6b6bcf01285, type: 2}
     - target: {fileID: 4869360564723807565, guid: 08f48cf624179074ea8f616718ae8bc2, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -826,10 +818,6 @@ PrefabInstance:
       propertyPath: gamecontroller
       value: 
       objectReference: {fileID: 1116373841}
-    - target: {fileID: 12183654, guid: c83f850ca2161344e90aa62dfe5303e8, type: 3}
-      propertyPath: selectBlockmat
-      value: 
-      objectReference: {fileID: 2100000, guid: 2c29a04f6306a3842812a6b6bcf01285, type: 2}
     - target: {fileID: 5424461648803022138, guid: c83f850ca2161344e90aa62dfe5303e8, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -878,18 +866,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wing
       objectReference: {fileID: 0}
-    - target: {fileID: 5424461648803022143, guid: c83f850ca2161344e90aa62dfe5303e8, type: 3}
-      propertyPath: m_Size.x
-      value: 0.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 5424461648803022143, guid: c83f850ca2161344e90aa62dfe5303e8, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5424461648803022143, guid: c83f850ca2161344e90aa62dfe5303e8, type: 3}
-      propertyPath: m_Size.z
-      value: 0.9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c83f850ca2161344e90aa62dfe5303e8, type: 3}
@@ -901,14 +877,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 755102019, guid: 5918193e452fad44f9ac385110617d98, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 755102019, guid: 5918193e452fad44f9ac385110617d98, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.91
-      objectReference: {fileID: 0}
     - target: {fileID: 8574182105734463312, guid: 5918193e452fad44f9ac385110617d98, type: 3}
       propertyPath: m_RootOrder
       value: 2

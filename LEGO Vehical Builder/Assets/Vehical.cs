@@ -23,15 +23,24 @@ public class Vehical : MonoBehaviour
             if (!changed)
             {
                 transform.position = new Vector3(100, 10, 100);
+                RB.constraints = RigidbodyConstraints.None;
                 RB.useGravity = true;
                 changed = true;
             }
+
 
             if (CheckPart("Wheel"))
             {
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-                    transform.position = transform.position + transform.forward * 8 * Time.deltaTime;
+                    foreach (GameObject item in Parts)
+                    {
+                        if (item.tag == "Wheel")
+                        {
+                            item.transform.Rotate(0, -1000, 0);
+                        }
+                    }
+                   // transform.position = transform.position + transform.forward * 8 * Time.deltaTime;
                 }
                 if (Input.GetKey(KeyCode.RightArrow))
                 {
@@ -48,16 +57,20 @@ public class Vehical : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.LeftShift))
                     {
-                        RB.AddForce(new Vector3(0, 500, 0));
+                        RB.AddForce(new Vector3(0, 500000, 0));
                     }
                 }
             }
         }
         if (gameController.gameState == GameController.GameState.Build)
         {
-            transform.position = new Vector3(0, 0, 0);
+            changed = false;
             RB.useGravity = false;
+            RB.constraints = RigidbodyConstraints.FreezeAll;
+            transform.position = new Vector3(0, 0, 0);
+            transform.rotation = Quaternion.identity;
         }
+
     }
 
     public void AddPart(GameObject part)

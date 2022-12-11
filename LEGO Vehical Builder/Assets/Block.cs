@@ -8,6 +8,14 @@ public class Block : VehicalPart
     //[SerializeField] BoxCollider collider;
     [SerializeField] GameObject outerCollision;
 
+    private void Update()
+    {
+        if (placed)
+        {
+            outerCollision.SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "collision")
