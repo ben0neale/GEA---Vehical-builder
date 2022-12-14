@@ -7,12 +7,19 @@ public class Block : VehicalPart
     //[SerializeField] GameController gameController;
     //[SerializeField] BoxCollider collider;
     [SerializeField] GameObject outerCollision;
+    [SerializeField] Rigidbody RB;
+    [SerializeField] GameController GameControllerRef;
 
     private void Update()
     {
         if (placed)
         {
             outerCollision.SetActive(true);
+        }
+
+        if (GameControllerRef.gameState == GameController.GameState.Build)
+        {
+            RB.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
 
@@ -38,5 +45,15 @@ public class Block : VehicalPart
     private void OnMouseDown()
     {
         tempSelected = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("collided");
+        if (collision.gameObject.tag == "obstical")
+        {
+            RB.constraints = RigidbodyConstraints.None;
+            gameObject.transform.parent = null;
+        }
     }
 }
