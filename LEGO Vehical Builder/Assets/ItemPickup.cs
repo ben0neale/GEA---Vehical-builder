@@ -24,7 +24,7 @@ public class ItemPickup : MonoBehaviour
     {
         if (!vehicalPartref.placeable)
         {
-            selectBlockmat.color = new Color(0, 0, 0, 0.00001f);
+            selectBlockmat.color = new Color(0, 0, 0, .1f);
         }
         if (vehicalPartref.placeable && vehicalPartref.GetSelected())
         {
