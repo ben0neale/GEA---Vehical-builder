@@ -27,4 +27,6 @@ public class Wing : VehicalPart
     {
         tempSelected = true;
     }
+
+
 }

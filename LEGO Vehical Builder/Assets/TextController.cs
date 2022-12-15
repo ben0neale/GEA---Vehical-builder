@@ -8,12 +8,7 @@ public class TextController : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI ModeText;
     [SerializeField] GameController GameControllerRef;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] TextMeshProUGUI controlsText;
 
     // Update is called once per frame
     void Update()
@@ -21,10 +16,13 @@ public class TextController : MonoBehaviour
         if (GameControllerRef.gameState == GameController.GameState.Build)
         {
             ModeText.text = "Mode: BUILD";
+            controlsText.fontSize = 22;
         }
         else if (GameControllerRef.gameState == GameController.GameState.play)
         {
             ModeText.text = "Mode: PLAY";
+            controlsText.fontSize = 0;
         }
+
     }
 }

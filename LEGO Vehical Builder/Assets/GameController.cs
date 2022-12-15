@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject block;
     [SerializeField] GameObject wheel;
     [SerializeField] GameObject wing;
+    [SerializeField] GameObject pole;
     public enum GameState {Build, play};
     public GameState gameState;
 
@@ -44,6 +45,10 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             Instantiate(wing, new Vector3(0, 0, -2), Quaternion.Euler(0, 0, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Instantiate(pole, new Vector3(0, 0, -2), Quaternion.Euler(0, 0, 0));
         }
 
         if (gameState == GameState.Build)
