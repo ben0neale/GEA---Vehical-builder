@@ -169,14 +169,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121219902}
-  m_LocalRotation: {x: 0.15335238, y: -0, z: -0, w: 0.9881716}
-  m_LocalPosition: {x: -0.035, y: 2.7, z: -0.132}
+  m_LocalRotation: {x: 0.28116113, y: -0, z: -0, w: 0.9596606}
+  m_LocalPosition: {x: -0.035000037, y: 15.79, z: -0.68479997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1068776481}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 17.643, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 32.659, y: 0, z: 0}
 --- !u!81 &121219904
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1736,6 +1736,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 755102019, guid: 5918193e452fad44f9ac385110617d98, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 755102019, guid: 5918193e452fad44f9ac385110617d98, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
     - target: {fileID: 8574182105734463312, guid: 5918193e452fad44f9ac385110617d98, type: 3}
       propertyPath: m_RootOrder
       value: 2
