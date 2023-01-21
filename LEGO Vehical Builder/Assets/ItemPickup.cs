@@ -26,11 +26,16 @@ public class ItemPickup : MonoBehaviour
         {
             selectBlockmat.color = new Color(0, 0, 0, .1f);
         }
+
+        //if the vehicle is placeable and this block is selected
         if (vehicalPartref.placeable && vehicalPartref.GetSelected())
         {
+            //change the colour of the select block to green
             selectBlockmat.color = new Color(0, 100, 0, 0.00001f);
+            //call connect part
             vehicalPartref.ConnectPart(gameObject);
         }
+
         if (gameController.gameState == GameController.GameState.Build)
         {
             GetComponent<Collider>().isTrigger = true;

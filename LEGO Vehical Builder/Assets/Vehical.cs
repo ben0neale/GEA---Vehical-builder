@@ -77,10 +77,6 @@ public class Vehical : MonoBehaviour
     {
         Parts.Add(part);
         part.transform.parent = transform;
-        foreach (GameObject item in Parts)
-        {
-            print(item.name);
-        }
     }
 
     bool CheckPart(string name)

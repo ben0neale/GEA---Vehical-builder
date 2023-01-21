@@ -4,33 +4,42 @@ using UnityEngine;
 
 public class VehicalPart : MonoBehaviour
 {
+    //Reference to outer select block
     [SerializeField] GameObject SelectedBlock;
-    public bool selected = false;
+    //Refence to vehicle base
     [SerializeField] Vehical vehical;
+    
+    public bool selected = false;
     public bool placeable = false;
     public bool placed = false;
 
     public bool tempSelected = false;
 
+    //Connect the vehicle part to the vehicle base
     public void ConnectPart(GameObject part)
     {
+        //if colliding with vehicle base and E pressed
         if (placeable && Input.GetKeyDown(KeyCode.E))
         {
+            //set placed
             placed = true;
+            //make the select block not visible
             SetNotSelected();
+            //add the vehicle part
             vehical.AddPart(part);
-            print("placed");
         }
     }
 
     public void SetSelected()
     {
+        //Show the select block
         SelectedBlock.SetActive(true);
         selected = true;
     }
 
     public void SetNotSelected()
     {
+        //Dont show the select block
         SelectedBlock.SetActive(false);
         selected = false;
     }
@@ -42,6 +51,7 @@ public class VehicalPart : MonoBehaviour
 
     public void MovePart(GameObject part)
     {
+        //Move the part with the arrow keys and shift and ctrl
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             part.transform.position = transform.position + new Vector3(1, 0, 0);

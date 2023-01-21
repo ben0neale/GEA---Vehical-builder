@@ -6,7 +6,7 @@ public class Wheel : VehicalPart
 {
     [SerializeField] WheelCollider collider;
 
-    private void Update()
+    private void Update()   
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {

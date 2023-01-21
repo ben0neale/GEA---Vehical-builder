@@ -49,7 +49,6 @@ public class Block : VehicalPart
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("collided");
         if (collision.gameObject.tag == "obstical")
         {
             RB.constraints = RigidbodyConstraints.None;
